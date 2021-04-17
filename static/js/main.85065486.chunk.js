@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-expense-tracker-app"]=this["webpackJsonpreact-expense-tracker-app"]||[]).push([[0],{9:function(e,t,r){"use strict";r.r(t);var c=r(1),n=r.n(c),a=r(3),s=r.n(a),p=r(0);var i=function(){return Object(p.jsx)("div",{children:Object(p.jsx)("h1",{children:"Hello Planet"})})};s.a.render(Object(p.jsx)(n.a.StrictMode,{children:Object(p.jsx)(i,{})}),document.getElementById("root"))}},[[9,1,2]]]);
+//# sourceMappingURL=main.85065486.chunk.js.map

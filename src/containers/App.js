@@ -1,10 +1,8 @@
 import React from 'react';
 import NewExpense from '../components/NewExpense/NewExpense';
 import Expenses from '../components/Expenses/Expenses';
-import myStyle from "./AppStyle";
 
 const App = () => {
-  const classes = myStyle()
   const expenses = [
     {
       id: 'e1',
@@ -37,7 +35,7 @@ console.log("In App.js")
   
 
   return (
-    <div className={classes.app}>
+    <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>

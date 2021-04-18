@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme)=>({
         justifyContent:"center",
         textAlign:"center",
         fontWeight:"bolder",
+        fontFamily: "'Yanone Kaffeesatz', sans-serif !important",
         flex: "1",
         margin: "0 1rem",
         [theme.breakpoints.down('sm')]: {

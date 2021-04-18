@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Input , Button }from '@material-ui/core/';
 import myStyle from "./ExpenseFormStyle";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const classes = myStyle()
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -47,7 +47,7 @@ const ExpenseForm = () => {
       amount:enteredAmount,
       date: new Date(enteredDate)
     }
-    console.log(expenseData)
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");

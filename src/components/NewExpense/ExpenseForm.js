@@ -44,17 +44,37 @@ const ExpenseForm = () => {
     <form>
       <div className={classes.form}>
   <Input
+  /*
+  .########.####.########.##.......########
+  ....##.....##.....##....##.......##......
+  ....##.....##.....##....##.......##......
+  ....##.....##.....##....##.......######..
+  ....##.....##.....##....##.......##......
+  ....##.....##.....##....##.......##......
+  ....##....####....##....########.########
+  */
   placeholder="Title"
   className={classes.input}
   onChange={titleChangeHandler}
+  value={enteredTitle}
      />
   <Input 
+  /*
+  ....###....##.....##..#######..##.....##.##....##.########
+  ...##.##...###...###.##.....##.##.....##.###...##....##...
+  ..##...##..####.####.##.....##.##.....##.####..##....##...
+  .##.....##.##.###.##.##.....##.##.....##.##.##.##....##...
+  .#########.##.....##.##.....##.##.....##.##..####....##...
+  .##.....##.##.....##.##.....##.##.....##.##...###....##...
+  .##.....##.##.....##..#######...#######..##....##....##...
+  */
   placeholder="Amount" 
   type="number" 
   min="0.01"
   step="0.01"
   className={classes.input}
   onChange={amountChangeHandler} 
+  value={enteredAmount}
   />
      
   <Input 
@@ -77,7 +97,9 @@ const ExpenseForm = () => {
         <Button 
         className={classes.button}
         type='submit'
-        variant="contained" color="primary"
+        variant="contained" 
+        color="primary"
+        value={enteredDate}
         >Add Expense</Button>
       </div>
     </form>

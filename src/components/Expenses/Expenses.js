@@ -1,12 +1,12 @@
 import React from 'react';
-
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
-import './Expenses.css';
+import myStyle from "./ExpensesStyle";
 
 const Expenses = (props) => {
+  const classes = myStyle()
   return (
-    <Card className="expenses">
+    <Card className={classes.expenses}>
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}

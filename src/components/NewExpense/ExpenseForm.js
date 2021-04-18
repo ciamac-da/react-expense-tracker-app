@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
-import './ExpenseForm.css';
+import {Input , Button }from '@material-ui/core/';
+import myStyle from "./ExpenseFormStyle";
 
 const ExpenseForm = () => {
+  const classes = myStyle()
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
@@ -41,32 +42,43 @@ const ExpenseForm = () => {
 
   return (
     <form>
-      <div className='new-expense__controls'>
-        <div className='new-expense__control'>
-          <label>Title</label>
-          <input type='text' onChange={titleChangeHandler} />
-        </div>
-        <div className='new-expense__control'>
-          <label>Amount</label>
-          <input
-            type='number'
-            min='0.01'
-            step='0.01'
-            onChange={amountChangeHandler}
-          />
-        </div>
-        <div className='new-expense__control'>
-          <label>Date</label>
-          <input
-            type='date'
-            min='2019-01-01'
-            max='2022-12-31'
-            onChange={dateChangeHandler}
-          />
-        </div>
+      <div className={classes.form}>
+  <Input
+  placeholder="Title"
+  className={classes.input}
+  onChange={titleChangeHandler}
+     />
+  <Input 
+  placeholder="Amount" 
+  type="number" 
+  min="0.01"
+  step="0.01"
+  className={classes.input}
+  onChange={amountChangeHandler} 
+  />
+     
+  <Input 
+    /*
+    ....########.....###....########.########
+    ....##.....##...##.##......##....##......
+    ....##.....##..##...##.....##....##......
+    ....##.....##.##.....##....##....######..
+    ....##.....##.#########....##....##......
+    ....##.....##.##.....##....##....##......
+    ....########..##.....##....##....########
+    */
+  className={classes.input}
+  placeholder="Date"  
+  type="date" 
+  onChange={dateChangeHandler}
+  />
       </div>
       <div className='new-expense__actions'>
-        <button type='submit'>Add Expense</button>
+        <Button 
+        className={classes.button}
+        type='submit'
+        variant="contained" color="primary"
+        >Add Expense</Button>
       </div>
     </form>
   );

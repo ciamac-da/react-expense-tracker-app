@@ -67,6 +67,7 @@ const ExpenseForm = (props) => {
   ....##....####....##....########.########
   */
   placeholder="Title"
+  required
   className={classes.input}
   onChange={titleChangeHandler}
   value={enteredTitle}
@@ -85,6 +86,7 @@ const ExpenseForm = (props) => {
   type="number" 
   min="0.01"
   step="0.01"
+  required
   className={classes.input}
   onChange={amountChangeHandler} 
   value={enteredAmount}
@@ -102,7 +104,8 @@ const ExpenseForm = (props) => {
     */
   className={classes.input}
   placeholder="Date"  
-  type="date" 
+  type="date"
+  required
   value={enteredDate}
   onChange={dateChangeHandler}
   />

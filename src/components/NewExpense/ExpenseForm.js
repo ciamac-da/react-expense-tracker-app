@@ -44,7 +44,7 @@ const ExpenseForm = (props) => {
     event.preventDefault()
     const expenseData = {
       title: enteredTitle,
-      amount:enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate)
     }
     props.onSaveExpenseData(expenseData);
@@ -115,7 +115,6 @@ const ExpenseForm = (props) => {
         className={classes.button}
         type='submit'
         variant="contained" 
-        color="primary"
         >Add Expense</Button>
       </div>
     </form>

@@ -2,16 +2,18 @@ import React from "react";
 import ChartBar from './ChartBar';
 import useStyles from "./ChartStyle";
 
-const Chart = (props) => {
+const Chart = props => {
     const classes = useStyles()
+    const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value);
+    const totalMaximum = Math.max(...dataPointValues);
     return (  
         <div className={classes.chart}>
-        {props.dataPionts.map(dataPiont =>( 
+        {props.dataPoints.map(dataPoint =>( 
         <ChartBar 
-        key={dataPiont.id}
-        value={dataPiont.value} 
-        maxValue={null} 
-        label={dataPiont.label} 
+        key={dataPoint.id}
+        value={dataPoint.value} 
+        maxValue={totalMaximum} 
+        label={dataPoint.label} 
         />
         ))}
         </div>

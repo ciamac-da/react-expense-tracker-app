@@ -25,7 +25,15 @@ const useStyles = makeStyles((theme)=>({
   },
   button:{
     marginTop:"10px",
-    marginBottom:"10px"
+    marginBottom:"10px",
+    background:"#4b4b4b",
+    transition:".7s",
+    color:"#fff",
+    "&:hover": {
+      background:"#fff",
+      color:"#4b4b4b",
+     transition:".7s",
+    }
   }
 
   }));

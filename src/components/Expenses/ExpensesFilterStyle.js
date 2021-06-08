@@ -9,6 +9,8 @@ const useStyles = makeStyles((theme)=>({
         display:"flex",
         justifyContent:"flex-end",
         background:"#ffffff",
+        position:"relative",
+        top:"10px"
     },
     option:{
         "&:hover":{

@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme)=>({
         backgroundColor: "#03a9f4",
         margin: "2rem auto",
         width: "50rem",
-        maxWidth: "95%"
+        maxWidth: "95%",
+        color: "#fff",
+        fontSize:"1.5rem",
+        fontWeight:"bolder"
       }
 
   }));

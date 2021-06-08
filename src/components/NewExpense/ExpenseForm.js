@@ -110,7 +110,7 @@ const ExpenseForm = (props) => {
   onChange={dateChangeHandler}
   />
       </div>
-      <div className='new-expense__actions'>
+      <div>
         <Button 
         className={classes.button}
         type='submit'
